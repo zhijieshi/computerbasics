@@ -1,0 +1,11 @@
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+theme: minima
+github: [metadata]
+
+collections:
+    topics:
+        output: true
+        permalink: /topics/:path/
+        
