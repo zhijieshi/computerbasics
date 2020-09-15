@@ -1,6 +1,6 @@
 ---
 title: Introduction to Binary Numbers
-layout: page
+layout: default
 description: We will start from decimal numbers and learn how to interpret bits.
 ---
 
