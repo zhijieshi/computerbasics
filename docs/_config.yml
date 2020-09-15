@@ -11,4 +11,3 @@ collections:
         label: Topics  
         output: true
         permalink: /topics/:path/
-  - tp
