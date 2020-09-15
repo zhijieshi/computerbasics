@@ -4,8 +4,10 @@ kramdown:
 theme: jekyll-theme-cayman
 github: [metadata]
 
+show_drafts         : true
+
 collections:
     topics:
         output: true
-        permalink: /topics/:path/
+          #        permalink: /topics/:path/
         
