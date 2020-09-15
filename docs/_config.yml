@@ -9,5 +9,5 @@ show_drafts         : true
 collections:
     topics:
         output: true
-          #        permalink: /topics/:path/
+        permalink: /topics/:path/
         
