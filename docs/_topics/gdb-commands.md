@@ -1,3 +1,9 @@
+---
+title: GDB
+layout: default
+description: Commonly used GDB commands
+---
+
 Read gdb manual for details.
 
 We can always see the help message in gdb. For example, 
