@@ -21,7 +21,9 @@ Add the following line into ~/.gdbinit to see instructions in Intel syntax.
     set disassembly-flavor intel
 ```
 
-Add more gdb commands here.
+If necessary, we can add more gdb commands here.
+
+We can also put commands in a file, say, saved-commands, and then use `source saved-commands` to execute all of them in gdb.
 
 # Start gdb
 
