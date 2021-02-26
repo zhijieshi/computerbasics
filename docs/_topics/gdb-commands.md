@@ -50,11 +50,15 @@ or use `set args` command.
 
 # Breakpoint
 
-Set a breakpoint at a function foo
+Set a breakpoint at a function main. Function names and line numbers
+can be modified by filename, for example, `a.c:10`.
+
+We can also add a condition to the break point.
 
 ```
-    break foo
-    break main
+    break main		# specify a function name
+    break [n]           # specify a line number
+    break [n] if [expr] # break at line 10 if i == 100
     break *0x08048449	# specify an address
 ```
 
