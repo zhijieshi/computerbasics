@@ -47,8 +47,9 @@ or use `set args` command.
     set args arg0 arg1 arg2 ...
 
 ```
+We can also use `start`, which will stop *at most convenient entry* (e.g., main()).
 
-# Breakpoint
+# Breakpoints
 
 Set a breakpoint at a function main. Function names and line numbers
 can be modified by filename, for example, `a.c:10`.
