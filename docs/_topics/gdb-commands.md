@@ -162,6 +162,28 @@ Check the instructions with disassemble command, or use x command.
     disas /m main
 ```
 
+# Core dump
+
+When there is a core dump, we can load the core into gdb and then study.
+
+```
+gdb program core
+```
+Sometimes, core dump is disabled by the admin. We can enable it, but instructions are
+different for each kind of OS.
+
+For Ubuntu 20.04, we can try:
+
+```
+# set the limit of core dump file
+sudo ulimit -S -c unlimited
+
+# check the current 
+cat /proc/sys/kernel/core_pattern
+
+# set the core dump file location, for example, to the current directory
+sudo sysctl -w kernel.core_pattern=core.%u.%p.%t 
+```
 
 There are many gdb cheat sheets on the Internet, for example, 
 [link](https://cs-uob.github.io/COMS20012/materials/lecture1/GDBCheatSheet.pdf)
