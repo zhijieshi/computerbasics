@@ -162,6 +162,21 @@ Check the instructions with disassemble command, or use x command.
     disas /m main
 ```
 
+# Reverse
+
+Sometimes we would like to undo the instructions, but we need to let gdb start the recording first.
+
+```
+record
+# then we can reverse execution of instructions recorded
+reverse-next[i]
+reverse-step[i]
+reverse-continue
+reverse-finish
+```
+
+
+
 # Core dump
 
 When there is a core dump, we can load the core into gdb and then study.
@@ -185,5 +200,11 @@ cat /proc/sys/kernel/core_pattern
 sudo sysctl -w kernel.core_pattern=core.%u.%p.%t 
 ```
 
+# Links
+
+[The 15-minute video](https://www.youtube.com/watch?v=PorfLSr3DDI) 
+shows that you can do a lot with gdb. 
+
 There are many gdb cheat sheets on the Internet, for example, 
 [link](https://cs-uob.github.io/COMS20012/materials/lecture1/GDBCheatSheet.pdf)
+
