@@ -197,11 +197,13 @@ ulimit -c unlimited     # set the max soft limit on core size
 # if needed, change the hard limit
 sudo ulimit -c unlimited -H
 
-# check the current 
+# check the current core dump filenames
 cat /proc/sys/kernel/core_pattern
 
-# if needed, set the core dump file location, for example, to the current directory
-sudo sysctl -w kernel.core_pattern=core.%u.%p.%t 
+# if needed, set the core dump file location, for example, to "core" under the current directory
+sudo sysctl -w kernel.core_pattern=core
+# or add more info (e.g., process id, time, uid) in the filename
+sudo sysctl -w kernel.core_pattern=core.%p.%t 
 ```
 
 # Links
