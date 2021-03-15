@@ -190,13 +190,17 @@ different for each kind of OS.
 For Ubuntu 20.04, we can try:
 
 ```
-# set the limit of core dump file
-sudo ulimit -S -c unlimited
+# set the limit of core dump file (by default, soft limit is changed)
+ulimit -c               # check the current soft limit on core size
+ulimit -c unlimited     # set the max soft limit on core size
+
+# if needed, change the hard limit
+sudo ulimit -c unlimited -H
 
 # check the current 
 cat /proc/sys/kernel/core_pattern
 
-# set the core dump file location, for example, to the current directory
+# if needed, set the core dump file location, for example, to the current directory
 sudo sysctl -w kernel.core_pattern=core.%u.%p.%t 
 ```
 
