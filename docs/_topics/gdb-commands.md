@@ -89,7 +89,8 @@ Show the frame information on the stack.
 Find out where we are.
 
 ```
-    backtrace		# or bt  call stack
+    backtrace		    # or bt  call stack
+    bt full             # full info about frames
     frame n             # select a frame to inspect  
     info frame          # current frame (use frame command to switch)
     info locals         # local variabls
@@ -175,8 +176,6 @@ reverse-continue
 reverse-finish
 ```
 
-
-
 # Core dump
 
 When there is a core dump, we can load the core into gdb and then study.
@@ -204,6 +203,14 @@ cat /proc/sys/kernel/core_pattern
 sudo sysctl -w kernel.core_pattern=core
 # or add more info (e.g., process id, time, uid) in the filename
 sudo sysctl -w kernel.core_pattern=core.%p.%t 
+```
+
+# Check memory sections/maps
+
+```
+info files
+maintenance info sections 
+info proc mappings
 ```
 
 # Links
