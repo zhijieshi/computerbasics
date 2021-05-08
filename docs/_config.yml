@@ -1,7 +1,7 @@
 markdown: kramdown
 kramdown:
   parse_block_html: true
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
 github: [metadata]
 
 show_drafts         : true
