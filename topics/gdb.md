@@ -9,7 +9,7 @@ We can always see the help message in gdb. For example,
     help b
 ```
 
-# Configure gdb
+## Configure gdb
 
 Add the following line into ~/.gdbinit to see instructions in Intel syntax.
 
@@ -26,14 +26,14 @@ show disassemble-next-line
 
 We can also put commands in a file, say, saved-commands, and then use `source saved-commands` to execute all of them in gdb.
 
-# Start gdb
+## Start gdb
 
 Start gdb on a program main. Change main to whatever program
 you want to inspect.
 
     $gdb main
 
-# run program 
+## run program 
 Run with arguments. Note this is inside gdb, not on the command line.
 
     run arg0 arg1 arg2 ...
@@ -48,7 +48,7 @@ We can use assembly layout to see instructions before getting started.
 
     layout asm
 
-# Breakpoints
+## Breakpoints
 
 Set a breakpoint at a function main. Function names and line numbers
 can be modified by filename, for example, `a.c:10`.
@@ -70,7 +70,7 @@ Breakpoints can be saved and loaded in later sessions.
     source filename
 ```
 
-# Control how program runs and when to stop again
+## Control how program runs and when to stop again
 
 ```
     continue [n]
@@ -82,7 +82,7 @@ Breakpoints can be saved and loaded in later sessions.
     finish
 ```
 
-# What you can do when program stops
+## What you can do when program stops
 
 Show the frame information on the stack.
 
@@ -164,20 +164,20 @@ Check the instructions with disassemble command, or use x command.
     disas /m main
 ```
 
-# Reverse
+## Reverse
 
 Sometimes we would like to undo the instructions, but we need to let gdb start the recording first.
 
 ```
 record
-# then we can reverse execution of instructions recorded
+## then we can reverse execution of instructions recorded
 reverse-next[i]
 reverse-step[i]
 reverse-continue
 reverse-finish
 ```
 
-# Core dump
+## Core dump
 
 When there is a core dump, we can load the core into gdb and then study.
 
@@ -206,7 +206,7 @@ sudo sysctl -w kernel.core_pattern=core
 sudo sysctl -w kernel.core_pattern=core.%p.%t 
 ```
 
-# Check memory sections/maps
+## Check memory sections/maps
 
 ```
 info files
@@ -214,7 +214,16 @@ maintenance info sections
 info proc mappings
 ```
 
-# Links
+## PEDA
+
+PEDA is a Python GDB script with many features and commands to make gdb more
+user friendly.  The following two commands install and enable PEDA. To disable
+PEDA, simply comment the source line in .gdbinit.
+
+    git clone https://github.com/longld/peda.git ~/peda
+    echo "source ~/peda/peda.py" >> ~/.gdbinit
+
+## Links
 
 [The 15-minute video](https://www.youtube.com/watch?v=PorfLSr3DDI) 
 shows that you can do a lot with gdb. 
