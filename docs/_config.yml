@@ -1,9 +1,11 @@
+theme: jekyll-theme-cayman
+github: # [metadata]
+
 markdown: kramdown
+
 kramdown:
   parse_block_html: true
-theme: jekyll-theme-minimal
-github: [metadata]
-
+    
 show_drafts         : true
 
 collections:
